@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Content = () => {
+export const Content = (props) => {
     var boxStyle = {
         width: "auto",
         height: "auto",
@@ -25,6 +25,7 @@ export const Content = () => {
       <p>Is Married = {isMarried ? "married" : "un-married"}</p>
       <p>User Name = {user.name}</p>
       <p>User City = {user.city}</p>
+      <p>Users Name = {props.users.name}</p>
     </div>
   )
 }

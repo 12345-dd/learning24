@@ -5,10 +5,14 @@ import { Header } from './components/Header';
 
 
 function App() {
+  var title = "Welcome to World Of React";
+  var users = {
+    name: "Ruturaj"
+  }
   return (
     <div className="App">
-      <Header/>
-      <Content/>
+      <Header title={title}/>
+      <Content users={users}/>
     </div>
   );
 }
