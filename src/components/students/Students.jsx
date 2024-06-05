@@ -6,17 +6,38 @@ export const Students = () => {
         {
             id:101,
             name:"Mayur",
-            age:21
+            age:21,
+            marks:95
         },
         {
             id:102,
             name:"Raj",
-            age:20
+            age:20,
+            marks:80
         },
         {
             id:103,
             name:"Aditya",
-            age:18
+            age:18,
+            marks:90
+        },
+        {
+            id:104,
+            name:"vishal",
+            age:22,
+            marks:75
+        },        
+        {
+            id:105,
+            name:"suresh",
+            age:24,
+            marks:40
+        },        
+        {
+            id:106,
+            name:"Rudra",
+            age:19,
+            marks:70
         }
     ]
 

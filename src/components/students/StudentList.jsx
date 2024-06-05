@@ -11,6 +11,7 @@ export const StudentList = (props) => {
                     <th>ID</th>
                     <th>Name</th>
                     <th>Age</th>
+                    <th>Marks</th>
                     <th>Action</th>
                 </tr>
             </thead>
@@ -22,6 +23,7 @@ export const StudentList = (props) => {
                                 <td>{s.id}</td>
                                 <td>{s.name}</td>
                                 <td>{s.age}</td>
+                                <td>{s.marks}</td>
                                 <td>
                                     <button onClick = {()=>{props.del(s.id)}}className='btn btn-danger'>DELETE</button>
                                 </td>
