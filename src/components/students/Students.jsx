@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { StudentList } from './StudentList'
 
 export const Students = () => {
-    var students = [
+    const [students, setstudents] = useState([
         {
             id:101,
             name:"Mayur",
@@ -39,15 +39,26 @@ export const Students = () => {
             age:19,
             marks:70
         }
-    ]
+    ]);
+
+    var addStudent = (s) => {
+        //Using Spread Operator to add Students
+        var estudents = [...students,s];
+        setstudents(estudents);
+    }
 
     var deleteStudent = (id) => {
-        alert(`Delete Student ID = ${id}`);
+        //alert(`Delete Student ID = ${id}`);
+        //Using Filter we filter out Students
+        var filterStudents = students.filter((stu) => {
+            return stu.id !== id;
+        })
+        setstudents(filterStudents);
     }
   return (
     <div>
         <h1 style={{color:"green"}}>Students</h1>
-        <StudentList students={students} del={deleteStudent}/>
+        <StudentList students={students} del={deleteStudent} addStudent={addStudent}/>
     </div>
   )
 }
