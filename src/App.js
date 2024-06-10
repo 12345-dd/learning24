@@ -12,6 +12,7 @@ import { Products } from './amazon/Products';
 import { Electronics } from './amazon/Electronics';
 import { Fashion } from './amazon/Fashion';
 import { Errorpage } from './amazon/Errorpage';
+import { ProductDetails } from './amazon/ProductDetails';
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
         <Route path='/products' element={<Products/>}></Route>
         <Route path='/products/electronics' element={<Electronics/>}></Route>
         <Route path='/products/fashion' element={<Fashion/>}></Route>
+        <Route path='/products/details/:id' element={<ProductDetails/>}></Route>
         <Route path='/*' element={<Errorpage/>}></Route>
       </Routes>
       {/* <Header title={title}/> */}
