@@ -107,7 +107,7 @@ Comments:-
 ctrl + c , then ctrl + k -- comments
 ctrl + c, then ctrl + u -- Un-comment
 
-routes: Routes is used in react to move from one component to another without being the page refresh.
+Routes: Routes is used in react to move from one component to another without being the page refresh.
 
 1 page -->2 page --> 3 page --> 4 page
 
