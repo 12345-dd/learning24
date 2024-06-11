@@ -1,11 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
 
 export const FormDemo1 = () => {
     const {register,handleSubmit} = useForm();
+    const [output, setoutput] = useState({});
+    const [color, setcolor] = useState("black");
+    const [isFormSubmitted, setisFormSubmitted] = useState(false)
 
     const submitHandler = (data) => {
         console.log("Data..",data);
+        setoutput(data);
+        setcolor(data.color);
+        setisFormSubmitted(true);
     }
   return (
     <div>
@@ -31,9 +37,33 @@ export const FormDemo1 = () => {
                 <br/>Table-Tennis : <input type='checkbox' value="tableTennis" name='hobbies' {...register("hobbies")}/>
             </div>
             <div>
+                <label>Select Country</label>
+                <select {...register("country")}>
+                    <option value="select">SELECT</option>
+                    <option value="india">INDIA </option>
+                    <option value="usa">USA</option>
+                    <option value="germany">Germany</option>
+                </select>
+            </div>
+            <div>
+                <label>Color</label>
+                <input type='color' {...register("color")}/>
+            </div>
+            <div>
                 <input type='submit' value="submit"/>
             </div>
         </form>
+        {
+            isFormSubmitted && (
+                <div style={{color:color}}>
+                    <h2>Ouput:</h2>
+                    <p>First Name : {output.fname}</p>
+                    <p>Last Name : {output.lname}</p>
+                    <p>Gender : {output.gender}</p>
+                    <p>Country : {output.country}</p>
+                </div>
+            )
+        }
     </div>
   )
 }
