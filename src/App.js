@@ -13,6 +13,7 @@ import { Electronics } from './amazon/Electronics';
 import { Fashion } from './amazon/Fashion';
 import { Errorpage } from './amazon/Errorpage';
 import { ProductDetails } from './amazon/ProductDetails';
+import { FormDemo1 } from './form/FormDemo1';
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
         <Route path='/products/electronics' element={<Electronics/>}></Route>
         <Route path='/products/fashion' element={<Fashion/>}></Route>
         <Route path='/products/details/:id' element={<ProductDetails/>}></Route>
+        <Route path='/formdemo1' element={<FormDemo1/>}></Route>
         <Route path='/*' element={<Errorpage/>}></Route>
       </Routes>
       {/* <Header title={title}/> */}

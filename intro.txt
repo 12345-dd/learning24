@@ -114,4 +114,10 @@ Routes: Routes is used in react to move from one component to another without be
 react-router-dom : npm install react-router-dom v.6.x
 
 <BrowerRouter> : it is used to create a router in react js.
-</BrowserRouter> :
+</BrowserRouter> 
+
+------------------------------------------------------------------
+Forms ==> npm i react-hook-form
+useForm() is used.
+register ===> is used to register the input fields, it is an object
+handleSubmit ===>  is used to submit the form, it is a function
