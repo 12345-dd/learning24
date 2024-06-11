@@ -19,7 +19,7 @@ export const FormTask = () => {
         const countryName = e.target.value;
         setSelectCountry(countryName);
         const country = data.find(country => country.cName === countryName);
-        setSelectStates(country ? country.states[0] : []);
+        setSelectStates(country.states);
     };
 
     const handleState = (e) => {
@@ -45,8 +45,8 @@ export const FormTask = () => {
                     <label>Select States</label>
                     <br />
                     <select onChange={handleState} value={selectStates}>
-                        {data.find(country => country.cName === selectCountry)?.states.map((state) => (
-                            <option value={state}>{state}</option>
+                        {data.find(country => country.cName === selectCountry)?.states.map((s) => (
+                            <option value={s}>{s}</option>
                         ))}
                     </select>
                 </div>

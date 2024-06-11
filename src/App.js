@@ -15,6 +15,7 @@ import { Errorpage } from './amazon/Errorpage';
 import { ProductDetails } from './amazon/ProductDetails';
 import { FormDemo1 } from './form/FormDemo1';
 import { FormTask } from './form/FormTask';
+import { FormTask2 } from './form/FormTask2';
 
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
         <Route path='/products/details/:id' element={<ProductDetails/>}></Route>
         <Route path='/formdemo1' element={<FormDemo1/>}></Route>
         <Route path='/task1' element={<FormTask/>}></Route>
+        <Route path='/task2' element={<FormTask2/>}></Route>
         <Route path='/*' element={<Errorpage/>}></Route>
       </Routes>
       {/* <Header title={title}/> */}
