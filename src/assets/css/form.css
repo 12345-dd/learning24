@@ -5,7 +5,7 @@ h1 {
 }
 
 form {
-    background: #fff;
+    background: #cf1515;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -42,17 +42,17 @@ button {
 
 
 .submitted-data {
-    background: #fff;
+    background: cyan;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(236, 12, 12, 0.1);
     width: 100%;
     max-width: 400px;
     margin: 20px auto;
 }
 
 .submitted-data h2 {
-    color: #333;
+    color: rgb(43, 0, 255);
 }
 
 .submitted-data p {
