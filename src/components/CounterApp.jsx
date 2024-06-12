@@ -24,7 +24,7 @@ export const CounterApp = () => {
         <div className='container'>
             <h1 className='heading'>Counter App</h1>
             <div className='sub-container'>
-                <h4 className='text-center' style={boxStyle}>{count}</h4>
+                <h3 className='text-center' style={boxStyle}>{count}</h3>
             </div>
             <div className='button-container'>
                 <button className='btn btn-success' onClick={()=>{increment()}}>Increment</button>
