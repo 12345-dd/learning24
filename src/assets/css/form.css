@@ -5,7 +5,7 @@ h1 {
 }
 
 form {
-    background: #cf1515;
+    background: #fff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -32,6 +32,7 @@ form {
 
 button {
     width: 100%;
+    margin: 10px;
     padding: 10px;
     background-color: greenyellow;
     border: none;
