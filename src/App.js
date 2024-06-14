@@ -18,6 +18,7 @@ import { FormTask } from './form/FormTask';
 import { FormTask2 } from './form/FormTask2';
 import { CounterApp } from './components/CounterApp';
 import { FormDemo2 } from './form/FormDemo2';
+import { ApiDemo1 } from './api/ApiDemo1';
 
 
 function App() {
@@ -39,6 +40,7 @@ function App() {
         <Route path='/task' element={<CounterApp/>}></Route>
         <Route path='/task1' element={<FormTask/>}></Route>
         <Route path='/task2' element={<FormTask2/>}></Route>
+        <Route path='/apidemo1' element={<ApiDemo1/>}></Route>
         <Route path='/*' element={<Errorpage/>}></Route>
       </Routes>
       {/* <Header title={title}/> */}
