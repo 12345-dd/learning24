@@ -14,6 +14,15 @@ export const ApiDemo1 = () => {
         setisLoading(false);
     }
 
+    const deleteApi = async(id) => {
+        const res = await axios.delete(`https://node5.onrender.com/user/user/${id}`);
+        if(res.status === 204){
+            getApiCalled();
+        } else{
+            console.log("Error in Deleting User");
+        }
+    }
+
     useEffect(() => {
         getApiCalled();
     }, [])
@@ -37,6 +46,7 @@ export const ApiDemo1 = () => {
                    <th>Name</th>
                    <th>E-mail</th>
                    <th>Age</th>
+                   <th>Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -48,6 +58,9 @@ export const ApiDemo1 = () => {
                                 <td>{d.name}</td>
                                 <td>{d.email}</td>
                                 <td>{d.age}</td>
+                                <td>
+                                    <button onClick={()=>{deleteApi(d._id)}}style={{color:"#fff",backgroundColor:"red"}}>Delete</button>
+                                </td>
                             </tr>
                         )
                     })
