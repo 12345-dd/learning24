@@ -1,19 +1,35 @@
 import axios from 'axios'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+import { CustomLoader } from '../components/CustomLoader';
 
 export const ApiDemo1 = () => {
     const [users, setusers] = useState([]);
+    const [isLoading, setisLoading] = useState(false);
     const getApiCalled = async() => {
+        setisLoading(true);
         const res = await axios.get("https://node5.onrender.com/user/user");
         console.log(res.data.message); // It is used to print message from the Api
         console.log(res.data.data); // It is used to print data from the api
         setusers(res.data.data);
+        setisLoading(false);
     }
+
+    useEffect(() => {
+        getApiCalled();
+    }, [])
+
+    //CallBack function
+    //Dependency Array
+    
   return (
     <div>
         <h1 style={{color:"green"}}>Api Demo 1</h1>
-        <button style={{width:"95px",color:"#fff",backgroundColor:"blue"}} onClick={()=>{getApiCalled()}}>GET API</button>
         <br/>
+        {isLoading ? (
+            <div>
+                <CustomLoader/>
+            </div>
+        ):(
         <table className='table'>
             <thead>
                 <tr>
@@ -38,6 +54,7 @@ export const ApiDemo1 = () => {
                 }
             </tbody>
         </table>
+       )}
     </div>
   )
 }
