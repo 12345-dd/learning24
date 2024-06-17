@@ -5,7 +5,7 @@ export const ApiDemo3 = () => {
 
     const postData = async () => {
 
-        const objToSubmit ={
+        const data ={
             name:"ash",
             email:"ash@gmail.com",
             status:"active",
@@ -13,7 +13,7 @@ export const ApiDemo3 = () => {
         }
 
         try{
-        const res = await axios.post("https://gorest.co.in/public/v2/users",objToSubmit,{
+        const res = await axios.post("https://gorest.co.in/public/v2/users",data,{
             headers:{
                 "Authorization":"Bearer 38980a262bce4a7639f24ddab09c3ace2f6772563690f4342038b3571aed5870"
             }
@@ -26,7 +26,7 @@ export const ApiDemo3 = () => {
     }
   return (
     <div>
-        ApiDemo3
+        <h1>ApiDemo3</h1>
         <button onClick={()=>{postData()}}>Post Data</button>
     </div>
   )
