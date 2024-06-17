@@ -1,6 +1,6 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import { CustomLoader } from '../components/CustomLoader';
+import { CustomLoader } from '../CustomLoader';
 
 export const ApiDemo1 = () => {
     const [users, setusers] = useState([]);
@@ -59,7 +59,7 @@ export const ApiDemo1 = () => {
                                 <td>{d.email}</td>
                                 <td>{d.age}</td>
                                 <td>
-                                    <button onClick={()=>{deleteApi(d._id)}}style={{color:"#fff",backgroundColor:"red"}}>Delete</button>
+                                    <button onClick={()=>{deleteApi(d._id)}} className='btn btn-primary'>Delete</button>
                                 </td>
                             </tr>
                         )

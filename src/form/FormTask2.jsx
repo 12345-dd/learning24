@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../assets/css/form.css';
+import '../assets/css/form.css'
 import { useForm } from 'react-hook-form';
 
 export const FormTask2 = () => {

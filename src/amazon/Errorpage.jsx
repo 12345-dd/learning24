@@ -13,7 +13,7 @@ export const Errorpage = () => {
             <p>...maybe the page you're looking for is not found or never existed.</p>
             <Link to="https://www.google.co.in/" target="blank">
             <Link to="/">
-            <button>
+            <button className='.button'>
                 Back to home <i className="far fa-hand-point-right" />
             </button>
             </Link>
