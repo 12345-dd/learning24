@@ -1,10 +1,31 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { CustomLoader } from '../CustomLoader';
+import { Button, Modal } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+
 
 export const ApiDemo1 = () => {
     const [users, setusers] = useState([]);
     const [isLoading, setisLoading] = useState(false);
+    const [show, setshow] = useState(false);
+    const [user, setuser] = useState({})
+
+    const handleClose = () => {
+        setshow(false);
+    }
+
+    const handleShow = async(id) => {
+        try{
+        const res = await axios.get(`https://node5.onrender.com/user/user/${id}`);
+        setuser(res.data.data);
+        }catch(e){
+            console.log(e);
+        }
+
+        setshow(true);
+    }
+
     const getApiCalled = async() => {
         setisLoading(true);
         const res = await axios.get("https://node5.onrender.com/user/user");
@@ -60,6 +81,8 @@ export const ApiDemo1 = () => {
                                 <td>{d.age}</td>
                                 <td>
                                     <button onClick={()=>{deleteApi(d._id)}} className='btn btn-primary'>Delete</button>
+                                    <button onClick={()=>{handleShow(d._id)}}className='btn btn-secondary'>Detail</button>
+                                    <Link to ={`/updateUser/${d._id}`} className="btn btn-warning">UPDATE</Link>
                                 </td>
                             </tr>
                         )
@@ -67,7 +90,22 @@ export const ApiDemo1 = () => {
                 }
             </tbody>
         </table>
+        
        )}
+        <Modal show={show} onHide={handleClose}>
+        <Modal.Header>
+          <Modal.Title>USER DETAIL</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+            <p>Name -- {user.name}</p>
+            <p>E-mail -- {user.email}</p>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </div>
   )
 }
