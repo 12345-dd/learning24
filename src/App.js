@@ -23,6 +23,7 @@ import { ApiDemo2 } from './components/api/ApiDemo2';
 import { ApiDemo3 } from './components/api/ApiDemo3';
 import { MovieApi } from './components/MovieApi';
 import { UpdateUser } from './components/api/UpdateUser';
+import { TodoList } from './components/TodoList';
 
 
 
@@ -50,6 +51,7 @@ function App() {
         <Route path='/apidemo3' element={<ApiDemo3/>}></Route>
         <Route path='/movies' element={<MovieApi/>}></Route>
         <Route path = "/updateUser/:id" element = {<UpdateUser/>}></Route>
+        <Route path='/todo' element={<TodoList/>}></Route>
         <Route path='/*' element={<Errorpage/>}></Route>
       </Routes>
       {/* <Header title={title}/> */}
