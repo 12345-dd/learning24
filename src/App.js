@@ -25,6 +25,7 @@ import { MovieApi } from './components/MovieApi';
 import { UpdateUser } from './components/api/UpdateUser';
 import { TodoList } from './components/TodoList';
 import { Google } from './contextdemo/Google';
+import { FormContext } from './components/contextTask/FormContext';
 
 
 
@@ -54,6 +55,7 @@ function App() {
         <Route path = "/updateUser/:id" element = {<UpdateUser/>}></Route>
         <Route path='/todo' element={<TodoList/>}></Route>
         <Route path='/google' element={<Google/>}></Route>
+        <Route path='/formtask' element={<FormContext/>}></Route>
         <Route path='/*' element={<Errorpage/>}></Route>
       </Routes>
       {/* <Header title={title}/> */}
