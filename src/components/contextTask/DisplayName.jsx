@@ -9,7 +9,7 @@ export const DisplayName = () => {
         <hr style={{border:"1px solid #000",margin:"50px"}}/>
         <div style={{margin:"10px"}}>
 
-            {<h1 style={{color:"red"}}> Welcome {submittedName} </h1>}
+            {submittedName && <h1 style={{color:"red"}}> Welcome {submittedName} </h1>}
         </div>
         <hr style={{border:"1px solid #000",margin:"50px"}}/>
         <DisplayMessage/>
