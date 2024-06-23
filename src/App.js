@@ -26,6 +26,7 @@ import { UpdateUser } from './components/api/UpdateUser';
 import { TodoList } from './components/TodoList';
 import { Google } from './contextdemo/Google';
 import { FormContext } from './components/contextTask/FormContext';
+import { PostTwwit } from './components/twitter/PostTwwit';
 
 
 
@@ -56,6 +57,7 @@ function App() {
         <Route path='/todo' element={<TodoList/>}></Route>
         <Route path='/google' element={<Google/>}></Route>
         <Route path='/formtask' element={<FormContext/>}></Route>
+        <Route path = "/postTweet" element = {<PostTwwit/>}></Route>
         <Route path='/*' element={<Errorpage/>}></Route>
       </Routes>
       {/* <Header title={title}/> */}
