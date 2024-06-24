@@ -5,7 +5,7 @@ export const DisplayBlog = () => {
     const {blogs} = useContext(BlogContext);
   return (
     <div>
-        <h1>DisplayBlog</h1>
+        <h1>Display Blogs</h1>
         <ul>
             {
                 blogs?.map((b)=>{

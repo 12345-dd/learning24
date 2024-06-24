@@ -7,6 +7,7 @@ export const PublishBlog = () => {
     const {register,handleSubmit} = useForm()
     const {blogs,setblogs} = useContext(BlogContext)
     const submitHandler = (data) => {
+        console.log(data);
         setblogs([...blogs,data])
     }
   return (

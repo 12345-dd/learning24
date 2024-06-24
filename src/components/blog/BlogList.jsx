@@ -3,7 +3,7 @@ import { DisplayBlog } from './DisplayBlog'
 import { BlogContext } from './blogcontext'
 
 export const BlogList = () => {
-    const {blogs} = useContext(BlogContext)
+    const {blogs,deleteContent} = useContext(BlogContext)
   return (
     <div>
         <h1>Blog List</h1>
@@ -11,9 +11,12 @@ export const BlogList = () => {
             {
                 blogs?.map((b)=>{
                     return(
+                        <>
                         <li>
-                            {b.author} - {b.title}
+                            {b.author} - {b.title} - {b.content}
+                            <button className='btn btn-danger' onClick={()=>(deleteContent(b.author))}>Delete</button>
                         </li>
+                        </>
                     )
                 })
             }
