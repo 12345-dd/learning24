@@ -28,6 +28,7 @@ import { Google } from './contextdemo/Google';
 import { FormContext } from './components/contextTask/FormContext';
 import { PostTwwit } from './components/twitter/PostTwwit';
 import { BlogMain } from './components/blog/BlogMain';
+import { BookComponent } from './components/BookComponent';
 
 
 
@@ -60,6 +61,7 @@ function App() {
         <Route path='/formtask' element={<FormContext/>}></Route>
         <Route path = "/postTweet" element = {<PostTwwit/>}></Route>
         <Route path='/blogmain' element = {<BlogMain/>}></Route>
+        <Route path  ="/books" element = {<BookComponent/>}></Route>
         <Route path='/*' element={<Errorpage/>}></Route>
       </Routes>
       {/* <Header title={title}/> */}

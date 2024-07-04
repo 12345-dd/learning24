@@ -61,6 +61,11 @@ export const Navbar = () => {
                     Google
                 </Link>
             </li>
+            <li class="nav-item active">
+                <Link class="nav-link" to="/books">
+                books
+                </Link>
+             </li>
             </ul>
         </div>
      </nav>
