@@ -29,6 +29,9 @@ import { FormContext } from './components/contextTask/FormContext';
 import { PostTwwit } from './components/twitter/PostTwwit';
 import { BlogMain } from './components/blog/BlogMain';
 import { BookComponent } from './components/BookComponent';
+import { BankComponent } from './components/BankComponent';
+import { useSelector } from 'react-redux';
+
 
 
 
@@ -37,8 +40,13 @@ function App() {
   // var users = {
   //   name: "Ruturaj"
   // }
+
+  const themeState = useSelector((state)=>{
+    return state.theme.theme
+  })
+  console.log("themeState",themeState)
   return (
-    <div className="App">
+    <div className="App" style={{backgroundColor:themeState === "light"?"white":"black"}}>
       <Navbar/>
       <Routes>
         <Route path='/' element={<Home/>}></Route>
@@ -62,7 +70,9 @@ function App() {
         <Route path = "/postTweet" element = {<PostTwwit/>}></Route>
         <Route path='/blogmain' element = {<BlogMain/>}></Route>
         <Route path  ="/books" element = {<BookComponent/>}></Route>
+        <Route path='/bank' element={<BankComponent/>}></Route>
         <Route path='/*' element={<Errorpage/>}></Route>
+        
       </Routes>
       {/* <Header title={title}/> */}
       {/*<Content users={users}/>*/}

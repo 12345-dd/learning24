@@ -1,10 +1,24 @@
 import React from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
+import { setTheme } from './redux/ThemeSlice'
 
 export const Navbar = () => {
+    const cartState = useSelector((state)=>{
+        return state.cart.cart
+    })
+    console.log(cartState.length);
+
+    const bankState = useSelector((state)=>{
+        return state.bank.balance;
+    })
+    console.log(bankState);
+
+    const dispatch = useDispatch();
   return (
     <div>
     <nav className="navbar navbar-expand-lg navbar-light" style={{backgroundColor: "#e3f2fd",height:"75px"}}>
+    <button onClick={()=>{dispatch(setTheme("dark"))}}>change theme</button>
         <Link className="navbar-brand" to="#">
             Navbar
         </Link>
@@ -63,9 +77,17 @@ export const Navbar = () => {
             </li>
             <li class="nav-item active">
                 <Link class="nav-link" to="/books">
-                books
+                books {
+                    cartState.length
+                }
                 </Link>
+                
              </li>
+             <li className="nav-item active">
+                <Link className="nav-link" to="/bank">
+                    Balance {bankState}
+                </Link>
+            </li>
             </ul>
         </div>
      </nav>
