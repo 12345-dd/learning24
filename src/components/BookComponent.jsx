@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { addToCart } from "../redux/BookSlice";
+import { addToCart, removeCart } from "../redux/BookSlice";
 
 export const BookComponent = () => {
   //useDispatch is responsible for dispatching the action
@@ -24,6 +24,12 @@ export const BookComponent = () => {
           >
             Add to Cart
           </button>
+          <button
+            onClick={()=>{dispatch(removeCart(1))}}
+            className="btn btn-danger"
+          >
+            Remove From Cart
+          </button>
         </div>
       </div>
       <div className="card" style={{ width: "18rem",margin:"10px" }}>
@@ -42,6 +48,14 @@ export const BookComponent = () => {
           >
             Add to Cart
           </button>
+          <button
+            onClick={() => {
+              dispatch(removeCart(2));
+            }}
+            className="btn btn-danger"
+          >
+            Remove From Cart
+          </button>
         </div>
       </div>
       <div className="card" style={{ width: "18rem" }}>
@@ -59,6 +73,14 @@ export const BookComponent = () => {
             className="btn btn-primary"
           >
             Add to Cart
+          </button>
+          <button
+            onClick={() => {
+              dispatch(removeCart(3));
+            }}
+            className="btn btn-danger"
+          >
+            Remove From Cart
           </button>
         </div>
       </div>

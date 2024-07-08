@@ -18,9 +18,16 @@ const bookSlice = createSlice({
       //state will intialSatte
       //action ->type /payload / object
     },
+    removeCart: (state, action) => {
+      console.log("action payload...", action.payload);
+      state.cart = state.cart.filter((item) => {
+        return item.id !== action.payload
+    });
+      console.log("cart after removing...", state.cart);
+    }
   },
 });
 //console.log("bookSlice...",bookSlice.action)
 //console.log("bookSlice...",bookSlice.reducer)
-export const { addToCart } = bookSlice.actions;
+export const { addToCart,removeCart } = bookSlice.actions;
 export default bookSlice.reducer;
