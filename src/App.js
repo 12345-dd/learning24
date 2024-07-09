@@ -30,7 +30,9 @@ import { PostTwwit } from './components/twitter/PostTwwit';
 import { BlogMain } from './components/blog/BlogMain';
 import { BookComponent } from './components/BookComponent';
 import { BankComponent } from './components/BankComponent';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { fetchContent } from './redux/ContentSlice';
 
 
 
@@ -40,6 +42,14 @@ function App() {
   // var users = {
   //   name: "Ruturaj"
   // }
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    dispatch(fetchContent())
+  }, [])
+
+  
+  
 
   const themeState = useSelector((state)=>{
     return state.theme.theme
