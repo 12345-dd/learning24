@@ -4,9 +4,10 @@ import { deposit, withdraw } from '../redux/BankSlice'
 
 export const BankComponent = () => {
   const dispatch = useDispatch()
-  const [depamount, setdepamount] = useState(0)
+  const [depamount, setdepamount] = useState(0);
+  const [withdrawamount, setwithdrawamount] = useState(0)
   const withdrawHandler = ()=>{
-    dispatch(withdraw(parseInt(depamount)))
+    dispatch(withdraw(parseInt(withdrawamount)))
   }
   const depositHandler = ()=>{
     console.log("deposit",depamount)
@@ -27,7 +28,7 @@ export const BankComponent = () => {
             <h1>Withdraw</h1>
             <div>
             <label>Amount:</label>
-            <input type='text' style={{margin:"10px"}} onChange={(e)=>{setdepamount(e.target.value)}}></input>
+            <input type='text' style={{margin:"10px"}} onChange={(e)=>{setwithdrawamount(e.target.value)}}></input>
             <button className='btn btn-primary' onClick={()=>{withdrawHandler()}}>Withdraw</button>
             </div>
         </div>
