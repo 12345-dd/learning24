@@ -88,6 +88,16 @@ export const Navbar = () => {
                     Balance {bankState}
                 </Link>
             </li>
+            <li className="nav-item active">
+                <Link className="nav-link" to="/flipkart">
+                    Products
+                </Link>
+            </li>
+            <li className="nav-item active">
+                <Link className="nav-link" to="/flipkart/prod">
+                    Sub-Products
+                </Link>
+            </li>
             </ul>
         </div>
      </nav>

@@ -33,6 +33,8 @@ import { BankComponent } from './components/BankComponent';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { fetchContent } from './redux/ContentSlice';
+import { Index } from './components/flipkart/Index';
+import { SubIndex } from './components/flipkart/SubIndex';
 
 
 
@@ -81,6 +83,8 @@ function App() {
         <Route path='/blogmain' element = {<BlogMain/>}></Route>
         <Route path  ="/books" element = {<BookComponent/>}></Route>
         <Route path='/bank' element={<BankComponent/>}></Route>
+        <Route path='/flipkart' element={<Index/>}></Route>
+        <Route path='/flipkart/prod' element={<SubIndex/>}></Route>
         <Route path='/*' element={<Errorpage/>}></Route>
         
       </Routes>
