@@ -35,6 +35,7 @@ import { useEffect } from 'react';
 import { fetchContent } from './redux/ContentSlice';
 import { Index } from './components/flipkart/Index';
 import { SubIndex } from './components/flipkart/SubIndex';
+import { ButtonComponent } from './components/mui/ButtonComponent';
 
 
 
@@ -85,6 +86,7 @@ function App() {
         <Route path='/bank' element={<BankComponent/>}></Route>
         <Route path='/flipkart' element={<Index/>}></Route>
         <Route path='/flipkart/prod' element={<SubIndex/>}></Route>
+        <Route path='/mui/button' element={<ButtonComponent/>}></Route>
         <Route path='/*' element={<Errorpage/>}></Route>
         
       </Routes>
