@@ -36,6 +36,9 @@ import { fetchContent } from './redux/ContentSlice';
 import { Index } from './components/flipkart/Index';
 import { SubIndex } from './components/flipkart/SubIndex';
 import { ButtonComponent } from './components/mui/ButtonComponent';
+import { RatingComponent } from './components/mui/RatingComponent';
+import { SliderComponent } from './components/mui/SliderComponent';
+
 
 
 
@@ -87,6 +90,8 @@ function App() {
         <Route path='/flipkart' element={<Index/>}></Route>
         <Route path='/flipkart/prod' element={<SubIndex/>}></Route>
         <Route path='/mui/button' element={<ButtonComponent/>}></Route>
+        <Route path='/mui/task1' element={<RatingComponent/>}></Route>
+        <Route path='/mui/task2' element={<SliderComponent/>}></Route>
         <Route path='/*' element={<Errorpage/>}></Route>
         
       </Routes>

@@ -1,7 +1,8 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
-import { setTheme } from './redux/ThemeSlice'
+import { setTheme, toggleTheme } from './redux/ThemeSlice'
+import { Switch } from '@mui/material'
 
 export const Navbar = () => {
     const cartState = useSelector((state)=>{
@@ -18,7 +19,7 @@ export const Navbar = () => {
   return (
     <div>
     <nav className="navbar navbar-expand-lg navbar-light" style={{backgroundColor: "#e3f2fd",height:"75px"}}>
-    <button onClick={()=>{dispatch(setTheme("dark"))}}>change theme</button>
+    <button onClick={()=>{dispatch(setTheme())}}>change theme</button>
         <Link className="navbar-brand" to="#">
             Navbar
         </Link>
@@ -100,6 +101,11 @@ export const Navbar = () => {
             </li>
             </ul>
         </div>
+        <Switch
+            
+            onClick={()=>{dispatch(toggleTheme())}}
+            inputProps={{ 'aria-label': 'controlled' }}
+        />
      </nav>
 
     </div>
