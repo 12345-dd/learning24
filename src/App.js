@@ -62,7 +62,7 @@ function App() {
   })
   console.log("themeState",themeState)
   return (
-    <div className="App" style={{backgroundColor:themeState === "light"?"white":"black"}}>
+    <div className="App" style={{backgroundColor:themeState === "light"?"white":"black",color:themeState === "light"?"black":"white"}}>
       <Navbar/>
       <Routes>
         <Route path='/' element={<Home/>}></Route>

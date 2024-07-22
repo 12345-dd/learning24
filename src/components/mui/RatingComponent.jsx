@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 export const RatingComponent = () => {
     const [value, setvalue] = useState();
 
-    const getRatingMessage = (value) => {
+    const ratingMessage = (value) => {
       switch (value) {
         case 1:
           return 'Very Bad';
@@ -30,7 +30,7 @@ export const RatingComponent = () => {
             setvalue(newValue);
         }}
         />
-        <p>{getRatingMessage(value)}</p>
+        <p>{ratingMessage(value)}</p>
   </div>
   )
 }
