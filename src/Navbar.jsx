@@ -99,6 +99,11 @@ export const Navbar = () => {
                     Sub-Products
                 </Link>
             </li>
+            <li className="nav-item active">
+                <Link className="nav-link" to="/mui/table">
+                    MUI-Table
+                </Link>
+            </li>
             </ul>
         </div>
         <Switch

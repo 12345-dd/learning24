@@ -38,6 +38,8 @@ import { SubIndex } from './components/flipkart/SubIndex';
 import { ButtonComponent } from './components/mui/ButtonComponent';
 import { RatingComponent } from './components/mui/RatingComponent';
 import { SliderComponent } from './components/mui/SliderComponent';
+import { TableComponent } from './components/mui/TableComponent';
+import { ApiTable } from './components/mui/ApiTable';
 
 
 
@@ -92,6 +94,8 @@ function App() {
         <Route path='/mui/button' element={<ButtonComponent/>}></Route>
         <Route path='/mui/task1' element={<RatingComponent/>}></Route>
         <Route path='/mui/task2' element={<SliderComponent/>}></Route>
+        <Route path='/mui/table' element={<TableComponent/>}></Route>
+        <Route path='/mui/table1' element={<ApiTable/>}></Route>
         <Route path='/*' element={<Errorpage/>}></Route>
         
       </Routes>
