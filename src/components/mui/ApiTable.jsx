@@ -73,7 +73,7 @@ export const ApiTable = () => {
     
 
   return (
-    <div style={{ height: 400, width: '100%' ,margin:"2px"}}>
+    <div style={{ height: "100%", width: '100%'}}>
     <DataGrid
       rows={users}
       columns={columns}
@@ -83,7 +83,7 @@ export const ApiTable = () => {
 
       }}
       pageSizeOptions={[5, 10, 15]}
-      autoHeight={users}
+      autoHeight={true}
     />
   </div>
   )

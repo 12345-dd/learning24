@@ -40,6 +40,8 @@ import { RatingComponent } from './components/mui/RatingComponent';
 import { SliderComponent } from './components/mui/SliderComponent';
 import { TableComponent } from './components/mui/TableComponent';
 import { ApiTable } from './components/mui/ApiTable';
+import { Dashboard } from './components/mui/Dashboard';
+
 
 
 
@@ -96,6 +98,7 @@ function App() {
         <Route path='/mui/task2' element={<SliderComponent/>}></Route>
         <Route path='/mui/table' element={<TableComponent/>}></Route>
         <Route path='/mui/table1' element={<ApiTable/>}></Route>
+        <Route path="/mui/dashboard" element={<Dashboard/>}></Route>
         <Route path='/*' element={<Errorpage/>}></Route>
         
       </Routes>
