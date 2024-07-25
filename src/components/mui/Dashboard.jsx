@@ -25,7 +25,7 @@ export const Dashboard = () => {
                 }}
             >
                 <h6>Valor da vendas</h6>
-                <h4>R$20.000,00</h4>
+                <h4>2000</h4>
             </Box>
             </Grid>
             <Grid item xs={6} sm={6} md={3}>
