@@ -8,7 +8,7 @@ export const Dashboard = () => {
   return (
     <Box>
         <Grid container spacing={2}>
-            <Grid item xs={6} sm={6} md={3}>
+            <Grid item xs={12} sm={6} md={3}>
             <Box
                 sx={{
                     backgroundColor: "#E8E8E8",
@@ -28,7 +28,7 @@ export const Dashboard = () => {
                 <h4>2000</h4>
             </Box>
             </Grid>
-            <Grid item xs={6} sm={6} md={3}>
+            <Grid item xs={12} sm={6} md={3}>
             <Box
                 sx={{
                     backgroundColor: "#E8E8E8",
@@ -48,7 +48,7 @@ export const Dashboard = () => {
                 <h4>367K</h4>
             </Box>
             </Grid>
-            <Grid item xs={6} sm={6} md={3}>
+            <Grid item xs={12} sm={6} md={3}>
             <Box
                 sx={{
                     backgroundColor: "#E8E8E8",
@@ -68,7 +68,7 @@ export const Dashboard = () => {
                 <h4>1,156</h4>
             </Box>
             </Grid>
-            <Grid item xs={6} sm={6} md={3}>
+            <Grid item xs={12} sm={6} md={3}>
             <Box
                 sx={{
                         backgroundColor: "#E8E8E8",
