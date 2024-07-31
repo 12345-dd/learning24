@@ -41,6 +41,8 @@ import { SliderComponent } from './components/mui/SliderComponent';
 import { TableComponent } from './components/mui/TableComponent';
 import { ApiTable } from './components/mui/ApiTable';
 import { Dashboard } from './components/mui/Dashboard';
+import { ChartDemo1 } from './charts/ChartDemo1';
+import { ChartDemo2 } from './charts/ChartDemo2';
 
 
 
@@ -99,6 +101,8 @@ function App() {
         <Route path='/mui/table' element={<TableComponent/>}></Route>
         <Route path='/mui/table1' element={<ApiTable/>}></Route>
         <Route path="/mui/dashboard" element={<Dashboard/>}></Route>
+        <Route path='/mui/chart1' element={<ChartDemo1/>}></Route>
+        <Route path='/mui/chart2' element={<ChartDemo2/>}></Route>
         <Route path='/*' element={<Errorpage/>}></Route>
         
       </Routes>

@@ -1,8 +1,8 @@
 import { Box, Grid } from '@mui/material'
 import React from 'react'
 import {ApiTable} from "./ApiTable"
-import image from "../../components/assets/image/cellphone.webp"
-import image1 from "../../components/assets/image/chart.jpg"
+import { ChartDemo1} from '../../charts/ChartDemo1'
+import { ChartDemo2 } from '../../charts/ChartDemo2'
 
 export const Dashboard = () => {
   return (
@@ -124,7 +124,7 @@ export const Dashboard = () => {
                         padding:"25px"
                 }}
             >
-                <img src={image} alt="image1" style={{ maxWidth: '100%', height: 'auto' }} />
+                <ChartDemo1/>
             </Box>
             </Grid>
         </Grid>
@@ -145,7 +145,7 @@ export const Dashboard = () => {
                     overflow:"auto",
                     }}
                 >
-                    <img src={image1} alt="image2" style={{ maxWidth: '100%', height: 'auto' }} />
+                    <ChartDemo2/>
                 </Box>
             </Grid>
         </Grid>
