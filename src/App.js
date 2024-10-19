@@ -44,6 +44,7 @@ import { Dashboard } from './components/mui/Dashboard';
 import { ChartDemo1 } from './charts/ChartDemo1';
 import { ChartDemo2 } from './charts/ChartDemo2';
 import { NodeComponent } from './components/NodeComponent';
+import { UploadFile } from './components/UploadFile';
 
 
 
@@ -105,6 +106,7 @@ function App() {
         <Route path='/mui/chart1' element={<ChartDemo1/>}></Route>
         <Route path='/mui/chart2' element={<ChartDemo2/>}></Route>
         <Route path='/node' element={<NodeComponent/>}></Route>
+        <Route path='/upload' element={<UploadFile/>}></Route>
         <Route path='/*' element={<Errorpage/>}></Route>
         
       </Routes>
