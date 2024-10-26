@@ -45,7 +45,7 @@ import React, { useState } from "react";
 export const UploadFile = () => {
   const [name, setName] = useState("");
   const [file, setFile] = useState(null);
-  const [uploadedItems, setUploadedItems] = useState([]);
+  const [UploadedItems, setUploadedItems] = useState([]);
 
   const fileUploadHandler = async () => {
 
@@ -91,7 +91,7 @@ export const UploadFile = () => {
 
       <div style={{ display: "flex", flexWrap: "wrap" ,gap: "1rem", marginTop: "1rem" ,justifyContent:"center"}}>
       {
-        uploadedItems.map((item) => (
+        UploadedItems.map((item) => (
             <div>
               <h3>{item.name}</h3>
               <img src={item.image} style={{ width: "300px", height: "300px" }} />
